@@ -1,24 +1,25 @@
-# README
+# techpit-match
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+マッチングしたユーザー間でチャットすることができるアプリ
 
-Things you may want to cover:
+### サイトテーマ
+WebアプリケーションフレームワークであるRuby on Railsを使ってTinder風簡易マッチングアプリを作成します。
 
-* Ruby version
+### テーマを選んだ理由
+- Ruby on Railsの基礎学習としてCRUDアプリケーションの制作を行う。
 
-* System dependencies
+### 機能
+- トップページ
+- ユーザー登録(Gem: devise)
+- プロフィールページ/編集
 
-* Configuration
+## 設計書
+※随時追加予定
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
