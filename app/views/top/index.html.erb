@@ -1,0 +1,26 @@
+
+<div class="jumbotron">
+  <div class="container">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand text-white">Techpit Match</a>
+      <div class="navbar__sign-in-btn">
+        <%= link_to "ログイン", new_user_session_path, class: "btn my-2 my-sm-0 bg-light text-top-color" %>
+      </div>
+    </nav>
+  </div>
+
+  <div class="top-title">
+    <h1 class="text-white text-center">
+      Swipe Right
+    </h1>
+  </div>
+
+  <div class="top-authentication text-center">
+    <div class="top-authentication__sign-up-btn m-3">
+      <%= link_to "アカウントを作成する", new_user_registration_path, class: "btn text-white" %>
+    </div>
+    <div class="top-authentication__sign-in-btn m-3">
+      <%= link_to "ログイン", new_user_session_path, class: "btn text-white" %>
+    </div>
+  </div>
+</div>
