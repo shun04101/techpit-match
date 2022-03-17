@@ -1,0 +1,64 @@
+
+.user-show-page {
+  max-width: 414px;
+  margin: 0 auto;
+  .profile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &-default-img {
+      height: 128px;
+      width: 128px;
+      object-fit: cover;
+      border-radius: 50%;
+      background-image: url("assets/profile_default_img_128.png");
+      background-size: contain;
+    }
+    &-img {
+      height: 128px;
+      width: 128px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &-name {
+      font-size: 24px;
+    }
+    &-text {
+      padding: 16px 24px 16px;
+      word-break: break-all;
+    }
+  }
+}
+
+.user-action {
+  display: flex;
+  justify-content: space-between;
+  color:#c3c7d0;
+  margin: 48px;
+  &-common {
+    color: #5c5c5c;
+    & > a {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      margin-bottom: 8px;
+      color: #5c5c5c;
+      box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+      transition: color .5s;
+    }
+  }
+}
+
+@media (min-width: 414px) {
+  .user-show-page {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin: 8px auto;
+  }
+}

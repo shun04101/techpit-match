@@ -1,0 +1,37 @@
+
+<!--プロフィールページ-->
+<div class="user-show-page">
+
+  <%= render "partial/navbar" %>
+
+  <div class="profile mt-4">
+    <div class="profile-default-img"></div>
+
+    <div class="profile-name mt-4">
+      <%= @user.name %>
+    </div>
+
+    <div class="profile-text">
+      <%= @user.self_introduction %>
+    </div>
+
+  </div>
+
+  <% if current_user.id == @user.id %>
+    <div class="user-action">
+      <div class="user-action-common">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+        <% end %>
+        <span>ログアウト</span>
+      </div>
+      <div class="user-action-common">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fas fa-pencil-alt fa-2x"></i>
+        <% end %>
+        <span>情報を編集<span>
+      </div>
+    </div>
+  <% end %>
+
+</div>
