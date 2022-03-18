@@ -1,14 +1,20 @@
 
 <nav class="navbar navbar-light">
-  <%= link_to "#", class: "nav-item nav-link", data: { turbolinks: :false } do %>
-    <i class="fas fa-fire fa-lg inherit"></i>
+
+  <%= link_to users_path, class: "nav-item nav-link", data: { turbolinks: :false } do %>
+    <span class="<%= 'active' if current_page?(users_path) %>">
+      <i class="fas fa-fire fa-lg inherit"></i>
+    </span>
   <% end %>
+
   <%= link_to "#", class: "nav-item nav-link" do %>
     <i class="fas fa-comments fa-lg inherit"></i>
   <% end %>
+
   <%= link_to user_path(@user), class: "nav-item nav-link" do %>
     <span class="<%= 'active' if current_page?(user_path(@user)) || current_page?(edit_user_registration_path) %>">
       <i class="fas fa-user fa-lg inherit"></i>
     </span>
   <% end %>
+
 </nav>
