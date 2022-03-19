@@ -4,12 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :reactions
+
 
   validates :name, presence: true
   validates :self_introduction, length: { maximum: 500 }
 
   enum gender: { man: 0, woman: 1 }
-  
+
   mount_uploader :profile_image, ProfileImageUploader
 
 

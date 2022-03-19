@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_121252) do
+ActiveRecord::Schema.define(version: 2022_03_19_131053) do
+
+  create_table "reactions", force: :cascade do |t|
+    t.integer "to_user_id", null: false
+    t.integer "from_user_id", null: false
+    t.integer "status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["from_user_id"], name: "index_reactions_on_from_user_id"
+    t.index ["to_user_id"], name: "index_reactions_on_to_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
